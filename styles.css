@@ -71,6 +71,12 @@ body {
     overflow-y: auto;
 }
 
+.screenshot {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     margin-bottom: 3rem;
     border-bottom: 2px solid #eee;
