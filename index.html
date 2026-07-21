@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manual del Usuario CISK Punto de Venta">
-    <title>CISK Punto de Venta - Manual del Usuario</title>
+    <title>Manual del Usuario - Punto de Venta CISK</title>
     <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="styles.css">
     <!-- Optional: Add a Google Font for better readability -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Favicon. Definir icono.. zemita de muestra solamente -->
-     <link rel="icon" href="./zemitaSquare.png">
+     <link rel="icon" href="./img/zemitaIcon.png">
 </head>
 <body>
 
@@ -23,9 +23,15 @@
             <nav>
                 <ul>
                     <li><a href="#introduction">Introducción</a></li>
-                    <li><a href="#getting-started">Inicio de Sesión</a></li>
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="#troubleshooting">Preguntas frecuentes</a></li>
+                    <li><a href="#login">Inicio de Sesión</a></li>
+                    <li><a href="#sales">Ventas</a></li>
+                    <li><a href="#finish-sale">Finalizar una Venta</a></li>
+                    <li><a href="#print-ticket">Reimpresión de Facturas</a></li>
+                    <li><a href="#cancel-ticket">Anulación de Facturas</a></li>
+                    <li><a href="#notes-on-ticket">Notas y Observaciones</a></li>
+                    <li><a href="#search-customer">Búsqueda de Clientes</a></li>
+                    <li><a href="#shortcuts">Atajos de Teclado</a></li>
+                    <li><a href="#troubleshooting">Problemas Frecuentes</a></li>
                 </ul>
             </nav>
         </aside>
@@ -41,24 +47,99 @@
                 <h2>Introducción</h2>
                 <p>Bienvenido al <strong>Punto de Venta CISK</strong>. Esta aplicación le ayudará a hacer las ventas de Shekapan eficientemente.</p>
                 <div class="note">
-                    <p><strong>Nota:</strong> Esta versión es incial, por lo que mejoras eventuales serán implementadas eventualmente... (Versión 1.0?)</p>
+                    <p><strong>Nota:</strong> Esta es una versión beta...? (Versión 1.xx, 07-2026?)</p>
                 </div>
             </section>
 
-            <section id="getting-started">
+            <section id="login">
                 <h2>Inicio de Sesión</h2>
-                <h3>Paso 1: Ingresar a <a href="https://www.shekapan.com.gt/Home/Login">CISK Shekapan</a></h3>
-                <p>Ingrese desde su navegador preferido</p>
-                
+                <h3>Paso 1: Ingresar a CISK</a></h3>
+                <p>Ingrese desde su navegador preferido a <a href="https://www.shekapan.com.gt/Home/Login">CISK</a></p>
+                <img src="./img/1.login.png" alt="Captura de pantalla del login de CISK." class="screenshot">
                 <h3>Paso 2: Iniciar Punto de Venta</h3>
+                <p>En el menu lateral Ventas pulse el botón Punto de Venta. Si no ve este botón, presione la flecha junto al botón Ventas para desplegar el menú.</p>
+                <img src="./img/2.menu.png" alt="Captura de pantalla del menu principal de CISK señalando con una flecha azul el menú de Punto de Venta" class="screenshot">
+            </section>
+            <section id="sales">
+                <h2>Ventas</h2>
+                <h3>Ingrese el NIT</h3>
+                <p>Inicie una venta nueva ingresando el NIT del cliente. Si no tiene NIT, puede omitir este paso presionando <code>Enter</code>.</p>
+                
+                <h3>Ingrese cantidad de productos</h3>
                 <ul>
-                    <li>En el mnenu Ventas pulse Punto de Venta</li>
-                    <li>Enter your API key.</li>
-                    <li>Save changes.</li>
+                    <li>Ingrese la cantidad de productos.</li>
+                    <li>Pulse el botón <code>Enter</code>para saltar a la siguiente línea de producto.</li>
+                    <li>Ingrese la cantidad de productos de una nueva línea.</li>
+                </ul>
+                <!-- screenshot de ventas -->
+                 <img src="./img/3.ventas.png" alt="Pantalla principal del Punto de Venta CISK" class="screenshot">
+                <div class="note">
+                    <p><strong>Nota:</strong> Si no conoce el código del producto a cobrar, puede buscar en el campo Artículo: mientras escriba, CISK le mostrará los productos que coinciden con su término de búsqueda. Seleccione con el ratón o las flechas de teclado el artículo que desea facturar.</p>
+                </div>
+                <!-- screenshot de busqueda de producto -->
+                 <img src="./img/4.busqueda.png" alt="Pantalla de búsqueda detallada de productos del punto de venta CISK" class="screenshot">
+            </section>
+            <section id="finish-sale">
+                <h2>Finalizar Venta</h2>
+                <p>Seleccione la forma de pago del menú lateral derecho. Una ventana emergente le muestra el resumen de la venta y la opción de ingresar el monto recibido. Al ingresar en el campo recibido, CISK calcula el cambio automáticamente.</p>
+                <!-- Agregar screenshot de finalizacion de venta -->
+                 <img src="./img/5.finalizarVenta.png" alt="Modal de recepcion de efectivo y validacion de venta" class="screenshot">
+                <div class="note">
+                <p>
+                    <strong>Nota:</strong> Use los atajos de teclado descritos en la sección <a href="#shortcuts">Atajos de Teclado</a> para cobrar rápidamente.
+                </p>
+                </div>
+            </section>
+            <section id="print-ticket">
+                <h2>Reimpresión de Facturas</h2>
+                <ul>
+                    <li>Pulse el botón Listado o use el atajo <code>F7</code>.</li>
+                    <li>Busque en el listado la factura que desea reimprimir. Puede usar el campo de búsqueda si conoce el nombre o NIT del cliente.</li>
+                    <li>Pulse el botón 🖨️ para imprimir el documento.</li>
+                </ul>
+                <!-- screenshot! -->
+                 <img src="./img/6.reimprimir.png" alt="Listado de ventas con flecha señalando el botón de impresión" class="screenshot">
+            </section>
+             <section id="cancel-ticket">
+                <h2>Anulación de Facturas</h2>
+                 <ul>
+                    <li>Pulse el botón Listado o use el atajo <code>F7</code>.</li>
+                    <li>Busque en el listado la factura que desea anular. Puede usar el campo de búsqueda si conoce el nombre o NIT del cliente.</li>
+                    <li>Pulse el botón de ❌ para anular el documento.</li>
                 </ul>
             </section>
-
-            <section id="features">
+             <section id="notes-on-ticket">
+                <h2>Notas y observaciones de Tickets</h2>
+                <p>Para agregar referencias u observaciones en la venta, anótelas en el campo Referencia / Observaciones justo debajo del Total a Pagar.</p>
+                <!-- screenshot! -->
+                 <img src="./img/7.notas.png" alt="Vista general del punto de venta con anotaciones de ejemplo en el campo de observaciones" class="screenshot">
+            </section>
+             <section id="open-drawer">
+                <h2>Abrir Gaveta</h2>
+                <p>Para abrir la gaveta de dinero, pulse el botón Gaveta del menú lateral.</p>
+                <div class="note">
+                     <p><strong>Tip: </strong>Use el atajo de teclado <code>Ctrl + F11</code> para abrir la gaveta de dinero rápidamente.</p>
+                </div>
+                <!-- screenshot! -->
+                 <img src="./img/8.gaveta.png" alt="Acercamiento del menú lateral con el botón Gaveta." class="screenshot">
+            </section>
+            <section id="search-customer">
+                <h2>Búsqueda de Clientes</h2>
+                <p>Para realizar una búsqueda avanzada de clientes, pulse el botón Buscar clientes del menú lateral.</p>
+                 <div class="note">
+                     <p><strong>Tip: </strong>Use el atajo de teclado <code>F2</code> para ingresar a la búsqueda avanzada de clientes.</p>
+                </div>
+                <p>Busque por NIT, nombre o DPI. Al encontrar el cliente deseado, seleccione con el mouse o con las flechas y presione Guardar. La información del cliente se cargará a una nueva venta del Punto de Venta.</p>
+                <!-- screenshot! -->
+                 <img src="./img/9.busqueda.png" alt="Pantalla de búsqueda avanzada con ejemplo." class="screenshot">
+            </section>
+            <section id="main-menu">
+                <h2>Menu Administrativo</h2>
+                <p>Presione el botón Menú administrativo del menú lateral.</p>
+                <!-- screenshot! -->
+                 <img src="./img/8.gaveta.png" alt="Acercamiento del menú lateral con el botón Menú Administrativo" class="screenshot">
+            </section>
+            <section id="shortcuts">
                 <h2>Atajos de Teclado</h2>
                 <p>Los atajos de teclado más comunes son:</p>
                 <table>
@@ -71,7 +152,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Validar con Efectivo</td>
+                            <td>Pago en Efectivo</td>
                             <td>Valida venta y certifica con SAT recibiendo Efectivo como forma de pago.</td>
                             <td><code>F10</code></td>
                         </tr>
@@ -87,24 +168,61 @@
                         </tr>
                         <tr>
                             <td>Tarjeta de Crédito con Ticket</td>
-                            <td>Valida la venta e imprime ticket recibiendo tarjeta de débito o crédito como forma de pago</td>
+                            <td>Valida la venta recibiendo tarjeta de débito o crédito como forma de pago</td>
                             <td><code>Ctrl + F9</code></td>
+                        </tr>
+                        <tr>
+                            <td>Ticket con Múltiples Formas de Pago</td>
+                            <td>Valida la venta e imprime ticket recibiendo tarjeta de débito o crédito y efectivo como formas de pago</td>
+                            <td><code>F8</code></td>
+                        </tr>
+                        <tr>
+                            <td>Listado</td>
+                            <td>Abre un listado con las facturas emitidas.</td>
+                            <td><code>F7</code></td>
+                        </tr>
+                        <tr>
+                            <td>Gaveta</td>
+                            <td>Abre la gaveta de dinero.</td>
+                            <td><code>Ctrl + F11</code></td>
+                        </tr>
+                        <tr>
+                            <td>Buscar clientes</td>
+                            <td>Abre un menú de búsqueda avanzada de clientes.</td>
+                            <td><code>F2</code></td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <section id="troubleshooting">
-                <h2>Preguntas Frecuentes</h2>
-                <h3>Al ingresar productos, no reconoce los códigos...</h3>
-                <p>Download the installer from the official website and run the setup wizard.</p>
-                
-                <h3>C/F se borró del campo NIT</h3>
-                <ul>
-                    <li>Diríjase al menú xxx.</li>
-                    <li>Pulse el botón xxxx.</li>
-                    <li>Save changes...</li>
-                </ul>
+                <h2>Problemas Frecuentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problema</th>
+                            <th>Descripción</th>
+                            <th>Solución</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Error 401</td>
+                            <td>El punto de venta se bloquea en la pantalla de alerta con el Error 401.</td>
+                            <td>Verifique la conexión a Internet. Reinicie el navegador (<code>Alt + F4</code>) y abra el acceso directo CISK Punto de Venta.</td>
+                        </tr>
+                        <tr>
+                            <td>Código inválido de producto</td>
+                            <td>Valida la venta y certifica con SAT recibiendo tarjeta de débito o crédito como forma de pago.</td>
+                            <td><code>F9</code></td>
+                        </tr>
+                        <tr>
+                            <td>Otros Problemas</td>
+                            <td>Describir aqui</td>
+                            <td><code>Ctrl + F9</code></td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <footer>
