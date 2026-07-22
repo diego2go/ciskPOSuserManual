@@ -71,7 +71,7 @@ body {
     overflow-y: auto;
 }
 
-.screenshot {
+.screenshot, .logo {
     border-radius: 15px;
     max-width: 100%;
     height: auto;
